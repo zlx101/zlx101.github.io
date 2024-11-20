@@ -1,0 +1,309 @@
+---
+layout: page
+title: Projects
+permalink: /projects/
+---
+
+<div class="projects-container">
+  <div class="projects-filters">
+    <div class="filter-group">
+      <label>Filter by Status:</label>
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="completed">Completed</button>
+      <button class="filter-btn" data-filter="in-progress">In Progress</button>
+      <button class="filter-btn" data-filter="planned">Planned</button>
+    </div>
+    
+    <div class="filter-group">
+      <label>Filter by Type:</label>
+      <button class="filter-btn active" data-type="all">All</button>
+      {% assign project_types = site.projects | map: "project_type" | uniq %}
+      {% for type in project_types %}
+        {% if type %}
+          <button class="filter-btn" data-type="{{ type | slugify }}">{{ type }}</button>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="projects-grid">
+    {% assign sorted_projects = site.projects | sort: 'date' | reverse %}
+    {% for project in sorted_projects %}
+    <article class="project-card" 
+             data-status="{{ project.status | downcase }}"
+             data-type="{{ project.project_type | slugify }}">
+      <div class="project-image">
+        {% if project.image %}
+        <img src="{{ project.image | relative_url }}" alt="{{ project.title }}">
+        {% else %}
+        <div class="placeholder-image">
+          <i class="fas fa-laptop-code"></i>
+        </div>
+        {% endif %}
+        <div class="project-overlay">
+          <span class="project-status {{ project.status | downcase }}">
+            {{ project.status }}
+          </span>
+        </div>
+      </div>
+      
+      <div class="project-content">
+        <h3 class="project-title">
+          <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
+        </h3>
+        
+        {% if project.technologies %}
+        <div class="project-tech">
+          {% for tech in project.technologies limit:3 %}
+          <span class="tech-tag">{{ tech }}</span>
+          {% endfor %}
+          {% if project.technologies.size > 3 %}
+          <span class="tech-tag more">+{{ project.technologies.size | minus: 3 }}</span>
+          {% endif %}
+        </div>
+        {% endif %}
+        
+        <p class="project-excerpt">{{ project.excerpt | strip_html | truncatewords: 30 }}</p>
+        
+        <div class="project-links">
+          <a href="{{ project.url | relative_url }}" class="read-more">Read More</a>
+          {% if project.github %}
+          <a href="{{ project.github }}" class="github" target="_blank" rel="noopener">
+            <i class="fab fa-github"></i>
+          </a>
+          {% endif %}
+          {% if project.website %}
+          <a href="{{ project.website }}" class="website" target="_blank" rel="noopener">
+            <i class="fas fa-external-link-alt"></i>
+          </a>
+          {% endif %}
+        </div>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.projects-filters {
+  margin-bottom: 2rem;
+}
+
+.filter-group {
+  margin-bottom: 1rem;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.filter-btn {
+  background: #f0f0f0;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.filter-btn:hover {
+  background: #e0e0e0;
+}
+
+.filter-btn.active {
+  background: #2a7ae2;
+  color: white;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-image {
+  position: relative;
+  height: 200px;
+  background: #f8f9fa;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholder-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: #ddd;
+}
+
+.project-overlay {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.project-status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.project-status.completed {
+  background: rgba(46, 204, 113, 0.9);
+  color: white;
+}
+
+.project-status.in-progress {
+  background: rgba(241, 196, 15, 0.9);
+  color: white;
+}
+
+.project-status.planned {
+  background: rgba(149, 165, 166, 0.9);
+  color: white;
+}
+
+.project-content {
+  padding: 1.5rem;
+}
+
+.project-title {
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+}
+
+.project-title a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-title a:hover {
+  color: #2a7ae2;
+}
+
+.project-tech {
+  margin-bottom: 1rem;
+}
+
+.tech-tag {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  margin: 0.25rem;
+  background: #f0f0f0;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.tech-tag.more {
+  background: #e0e0e0;
+  cursor: help;
+}
+
+.project-excerpt {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.project-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.project-links a {
+  color: #2a7ae2;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-links a:hover {
+  color: #1756a9;
+}
+
+.read-more {
+  font-weight: 500;
+}
+
+.project-links .github,
+.project-links .website {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const projects = document.querySelectorAll('.project-card');
+  
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const filterGroup = button.parentElement;
+      const isStatusFilter = filterGroup.querySelector('label').textContent.includes('Status');
+      
+      // Remove active class from other buttons in the same group
+      filterGroup.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      button.classList.add('active');
+      
+      // Get active filters
+      const activeStatus = document.querySelector('.filter-group:first-child .filter-btn.active').dataset.filter;
+      const activeType = document.querySelector('.filter-group:last-child .filter-btn.active').dataset.type;
+      
+      // Filter projects
+      projects.forEach(project => {
+        const matchesStatus = activeStatus === 'all' || project.dataset.status === activeStatus;
+        const matchesType = activeType === 'all' || project.dataset.type === activeType;
+        
+        if (matchesStatus && matchesType) {
+          project.style.display = 'block';
+        } else {
+          project.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+</script>

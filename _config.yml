@@ -1,0 +1,124 @@
+title: My Tech Blog
+description: Exploring Technology and Development
+author:
+  name: Tech Explorer
+  email: contact@techblog.com
+  bio: A passionate developer and tech writer sharing insights about software development and technology trends
+
+# Social links
+twitter_username: techexplorer
+github_username: tech-explorer
+linkedin_username: techexplorer
+
+# Site settings
+baseurl: "" # 使用自定义域名时留空
+url: "https://digiccy.wang" # 你的域名
+permalink: /:year/:month/:day/:title/
+timezone: Asia/Shanghai
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+
+# Pagination
+paginate: 5
+paginate_path: "/page:num/"
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+
+# Default front matter settings
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true
+      sharing: true
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+      comments: false
+      sharing: true
+
+# Comments settings
+disqus:
+  shortname: # your Disqus shortname
+
+# Analytics settings
+google_analytics: # your Google Analytics tracking ID
+google_tag_manager: # your Google Tag Manager container ID
+
+# Newsletter settings
+mailchimp:
+  form_action: # your MailChimp form action URL
+  hidden_name: # your MailChimp hidden input name
+
+# SEO settings
+twitter:
+  username: techexplorer
+  card: summary_large_image
+facebook:
+  app_id: # your Facebook app ID
+  publisher: # your Facebook page URL
+logo: /assets/images/logo.png
+social:
+  name: Tech Explorer
+  links:
+    - https://twitter.com/techexplorer
+    - https://www.facebook.com/techexplorer
+    - https://www.linkedin.com/in/techexplorer
+    - https://github.com/tech-explorer
+
+# Reading time settings
+reading_time:
+  enabled: true
+  wpm: 200
+  prefix: "Reading time:"
+  suffix: "min"
+
+# Project settings
+projects:
+  categories:
+    - Client
+    - Research
+    - Open Source
+  statuses:
+    - Active
+    - Completed
+    - In Progress
+    - On Hold
+
+# Google reCAPTCHA
+recaptcha:
+  sitekey: "6LfqkIQqAAAAAJkq9CyY7JpRy4LhgQVS6esGpb_9"    # 生产环境 Site Key
+  secret: "6LfqkIQqAAAAAIp3tVpYm3solYlrv4GlEl2l7pzc"     # 生产环境 Secret Key
+
+# Sass settings
+sass:
+  style: compressed
+  sourcemap: never
+
+# Exclude files from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+  - CHANGELOG.md
+  - LICENSE
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/

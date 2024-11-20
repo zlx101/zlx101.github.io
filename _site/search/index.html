@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Search - My Tech Blog</title>
+  <meta name="description" content="Exploring Technology and Development">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/forms.css">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  
+  
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrapper">
+      <a class="site-title" href="/">My Tech Blog</a>
+      <nav class="site-nav">
+        <a href="/about">About</a>
+        <a href="/projects">Projects</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-content" aria-label="Content">
+    <div class="page-content">
+  <div class="wrapper">
+    <article class="post">
+      <header class="post-header">
+        <h1 class="post-title">Search</h1>
+        
+      </header>
+
+      <div class="post-content">
+        <div class="search-container">
+  <input type="text" id="search-input" placeholder="Search blog posts...">
+  <div id="search-results" class="search-results"></div>
+</div>
+
+<!-- Add search scripts -->
+<script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+<script src="/assets/js/search.js"></script>
+
+<style>
+.search-container {
+  margin: 20px 0;
+}
+
+#search-input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.search-results {
+  margin-top: 20px;
+}
+
+.search-result {
+  margin: 20px 0;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.search-result:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+}
+
+.search-result a {
+  color: #2a7ae2;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.search-result p {
+  color: #666;
+  margin-top: 10px;
+}
+</style>
+
+      </div>
+    </article>
+  </div>
+</div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrapper">
+      <div class="footer-content">
+        <p>&copy; 2024 Tech Explorer. All rights reserved.</p>
+        <div class="social-links">
+          
+          <a href="https://github.com/tech-explorer" target="_blank" rel="noopener">
+            <i class="fab fa-github"></i>
+          </a>
+          
+          
+          
+          <a href="https://twitter.com/techexplorer" target="_blank" rel="noopener">
+            <i class="fab fa-twitter"></i>
+          </a>
+          
+          
+          
+          <a href="https://linkedin.com/in/techexplorer" target="_blank" rel="noopener">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  
+</body>
+</html>

@@ -1,0 +1,985 @@
+Windows PowerShell
+版权所有（C） Microsoft Corporation。保留所有权利。
+
+安装最新的 PowerShell，了解新功能和改进！https://aka.ms/PSWindows
+
+PS C:\Users\zlx02> ruby -v
+ruby 3.2.6 (2024-10-30 revision 63aeb018eb) [x64-mingw-ucrt]
+PS C:\Users\zlx02> gem install bundler jekyll
+Successfully installed bundler-2.5.23
+Parsing documentation for bundler-2.5.23
+Done installing documentation for bundler after 0 seconds
+Fetching mercenary-0.4.0.gem
+Fetching rouge-4.5.1.gem
+Fetching pathutil-0.16.2.gem
+Fetching forwardable-extended-2.6.0.gem
+Fetching liquid-4.0.4.gem
+Fetching kramdown-2.5.1.gem
+Fetching kramdown-parser-gfm-1.1.0.gem
+Fetching ffi-1.17.0-x64-mingw-ucrt.gem
+Fetching rb-inotify-0.11.1.gem
+Fetching rb-fsevent-0.11.2.gem
+Fetching listen-3.9.0.gem
+Fetching jekyll-watch-2.2.1.gem
+Fetching google-protobuf-4.28.3-x64-mingw-ucrt.gem
+Fetching sass-embedded-1.81.0-x64-mingw-ucrt.gem
+Fetching jekyll-sass-converter-3.0.0.gem
+Fetching concurrent-ruby-1.3.4.gem
+Fetching i18n-1.14.6.gem
+Fetching http_parser.rb-0.8.0.gem
+Fetching eventmachine-1.2.7.gem
+Fetching jekyll-4.3.4.gem
+Fetching em-websocket-0.5.3.gem
+Fetching colorator-1.1.0.gem
+Fetching public_suffix-6.0.1.gem
+Fetching addressable-2.8.7.gem
+Successfully installed webrick-1.9.0
+Successfully installed unicode-display_width-2.6.0
+Successfully installed terminal-table-3.0.2
+Successfully installed safe_yaml-1.0.5
+Successfully installed rouge-4.5.1
+Successfully installed forwardable-extended-2.6.0
+Successfully installed pathutil-0.16.2
+Successfully installed mercenary-0.4.0
+Successfully installed liquid-4.0.4
+Successfully installed kramdown-2.5.1
+Successfully installed kramdown-parser-gfm-1.1.0
+Successfully installed ffi-1.17.0-x64-mingw-ucrt
+Successfully installed rb-inotify-0.11.1
+Successfully installed rb-fsevent-0.11.2
+Successfully installed listen-3.9.0
+Successfully installed jekyll-watch-2.2.1
+Successfully installed google-protobuf-4.28.3-x64-mingw-ucrt
+Successfully installed sass-embedded-1.81.0-x64-mingw-ucrt
+Successfully installed jekyll-sass-converter-3.0.0
+Successfully installed concurrent-ruby-1.3.4
+PSA: I18n will be dropping support for Ruby < 3.2 in the next major release (April 2025), due to Ruby's end of life for3.1 and below (https://endoflife.date/ruby). Please upgrade to Ruby 3.2 or newer by April 2025 to continue using futureversions of this gem.
+Successfully installed i18n-1.14.6
+Temporarily enhancing PATH for MSYS/MINGW...
+Building native extensions. This could take a while...
+Successfully installed http_parser.rb-0.8.0
+Building native extensions. This could take a while...
+Successfully installed eventmachine-1.2.7
+Successfully installed em-websocket-0.5.3
+Successfully installed colorator-1.1.0
+Successfully installed public_suffix-6.0.1
+Successfully installed addressable-2.8.7
+Successfully installed jekyll-4.3.4
+Parsing documentation for webrick-1.9.0
+Installing ri documentation for webrick-1.9.0
+Parsing documentation for unicode-display_width-2.6.0
+Installing ri documentation for unicode-display_width-2.6.0
+Parsing documentation for terminal-table-3.0.2
+Installing ri documentation for terminal-table-3.0.2
+Parsing documentation for safe_yaml-1.0.5
+Installing ri documentation for safe_yaml-1.0.5
+Parsing documentation for rouge-4.5.1
+Installing ri documentation for rouge-4.5.1
+Parsing documentation for forwardable-extended-2.6.0
+Installing ri documentation for forwardable-extended-2.6.0
+Parsing documentation for pathutil-0.16.2
+Installing ri documentation for pathutil-0.16.2
+Parsing documentation for mercenary-0.4.0
+Installing ri documentation for mercenary-0.4.0
+Parsing documentation for liquid-4.0.4
+Installing ri documentation for liquid-4.0.4
+Parsing documentation for kramdown-2.5.1
+Installing ri documentation for kramdown-2.5.1
+Parsing documentation for kramdown-parser-gfm-1.1.0
+Installing ri documentation for kramdown-parser-gfm-1.1.0
+Parsing documentation for ffi-1.17.0-x64-mingw-ucrt
+Installing ri documentation for ffi-1.17.0-x64-mingw-ucrt
+Parsing documentation for rb-inotify-0.11.1
+Installing ri documentation for rb-inotify-0.11.1
+Parsing documentation for rb-fsevent-0.11.2
+Installing ri documentation for rb-fsevent-0.11.2
+Parsing documentation for listen-3.9.0
+Installing ri documentation for listen-3.9.0
+Parsing documentation for jekyll-watch-2.2.1
+Installing ri documentation for jekyll-watch-2.2.1
+Parsing documentation for google-protobuf-4.28.3-x64-mingw-ucrt
+Installing ri documentation for google-protobuf-4.28.3-x64-mingw-ucrt
+Parsing documentation for sass-embedded-1.81.0-x64-mingw-ucrt
+Installing ri documentation for sass-embedded-1.81.0-x64-mingw-ucrt
+Parsing documentation for jekyll-sass-converter-3.0.0
+Installing ri documentation for jekyll-sass-converter-3.0.0
+Parsing documentation for concurrent-ruby-1.3.4
+Installing ri documentation for concurrent-ruby-1.3.4
+Parsing documentation for i18n-1.14.6
+Installing ri documentation for i18n-1.14.6
+Parsing documentation for http_parser.rb-0.8.0
+unknown encoding name "chunked\r\n\r\n25" for ext/ruby_http_parser/vendor/http-parser-java/tools/parse_tests.rb, skipping
+Installing ri documentation for http_parser.rb-0.8.0
+Parsing documentation for eventmachine-1.2.7
+Installing ri documentation for eventmachine-1.2.7
+Parsing documentation for em-websocket-0.5.3
+Installing ri documentation for em-websocket-0.5.3
+Parsing documentation for colorator-1.1.0
+Installing ri documentation for colorator-1.1.0
+Parsing documentation for public_suffix-6.0.1
+Installing ri documentation for public_suffix-6.0.1
+Parsing documentation for addressable-2.8.7
+Installing ri documentation for addressable-2.8.7
+Parsing documentation for jekyll-4.3.4
+Installing ri documentation for jekyll-4.3.4
+Done installing documentation for webrick, unicode-display_width, terminal-table, safe_yaml, rouge, forwardable-extended, pathutil, mercenary, liquid, kramdown, kramdown-parser-gfm, ffi, rb-inotify, rb-fsevent, listen, jekyll-watch, google-protobuf, sass-embedded, jekyll-sass-converter, concurrent-ruby, i18n, http_parser.rb, eventmachine, em-websocket, colorator, public_suffix, addressable, jekyll after 31 seconds
+29 gems installed
+
+A new release of RubyGems is available: 3.4.19 → 3.5.23!
+Run `gem update --system 3.5.23` to update your installation.
+
+PS C:\Users\zlx02> cd c:/Users/zlx02/Desktop/每日公众号写文素材cd c:/Users/zlx02/Desktop/每日公众号写文素材cd c:/Users/zlx02/Desktop/每日公众号写文素材cd c:/Users/zlx02/Desktop/每日公众号写文素材cdccdbundle install
+Set-Location : 找不到接受实际参数“c:/Users/zlx02/Desktop/每日公众号写文素材cd”的位置形式参数。
+所在位置 行:1 字符: 1
++ cd c:/Users/zlx02/Desktop/每日公众号写文素材cd c:/Users/zlx02/Desktop/每日公众号写文素 ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Set-Location]，ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+PS C:\Users\zlx02>
+PS C:\Users\zlx02>
+PS C:\Users\zlx02> cd c:/Users/zlx02/Desktop/每日公众号写文素材cd c:/Users/zlx02/Desktop/每日公众号写文素材
+Set-Location : 找不到接受实际参数“c:/Users/zlx02/Desktop/每日公众号写文素材”的位置形式参数。
+所在位置 行:1 字符: 1
++ cd c:/Users/zlx02/Desktop/每日公众号写文素材cd c:/Users/zlx02/Desktop/每日公众号写文素 ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Set-Location]，ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+PS C:\Users\zlx02> cd "c:\Users\zlx02\Desktop\每日公众号写文素材"
+PS C:\Users\zlx02\Desktop\每日公众号写文素材> pwd
+
+Path
+----
+C:\Users\zlx02\Desktop\每日公众号写文素材
+
+
+PS C:\Users\zlx02\Desktop\每日公众号写文素材> bundle install
+Fetching gem metadata from https://rubygems.org/..
+
+
+Resolving dependencies...
+Could not find compatible versions
+
+Because jekyll-assets >= 3.0.0 depends on jekyll >= 3.5, < 4.0
+  and Gemfile depends on jekyll ~> 4.3.2,
+  jekyll-assets >= 3.0.0 cannot be used.
+So, because Gemfile depends on jekyll-assets ~> 3.0,
+  version solving has failed.
+PS C:\Users\zlx02\Desktop\每日公众号写文素材>  bundle exec jekyll serve --livereload
+Could not find gem 'minima (~> 2.5)' in locally installed gems.
+Run `bundle install` to install missing gems.
+PS C:\Users\zlx02\Desktop\每日公众号写文素材> Server address: http://127.0.0.1:4000/
+Server : 无法将“Server”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查名称的拼写，如果包括路径，请确保路径
+正确，然后再试一次。
+所在位置 行:1 字符: 1
++ Server address: http://127.0.0.1:4000/
++ ~~~~~~
+    + CategoryInfo          : ObjectNotFound: (Server:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\zlx02\Desktop\每日公众号写文素材> bundle install
+Fetching gem metadata from https://rubygems.org/..........
+Resolving dependencies...
+Could not find compatible versions
+
+Because jekyll-assets >= 3.0.0 depends on jekyll >= 3.5, < 4.0
+  and Gemfile depends on jekyll ~> 4.3.2,
+  jekyll-assets >= 3.0.0 cannot be used.
+So, because Gemfile depends on jekyll-assets ~> 3.0,
+  version solving has failed.
+PS C:\Users\zlx02\Desktop\每日公众号写文素材> bundle exec jekyll serve --livereload
+Could not find gem 'minima (~> 2.5)' in locally installed gems.
+Run `bundle install` to install missing gems.
+PS C:\Users\zlx02\Desktop\每日公众号写文素材> gem sources --add https://mirrors.tuna.tsinghua.edu.cn/rubygems/ --removehttps://rubygems.org/
+https://mirrors.tuna.tsinghua.edu.cn/rubygems/ added to sources
+https://rubygems.org/ removed from sources
+PS C:\Users\zlx02\Desktop\每日公众号写文素材> gem sources -l
+*** CURRENT SOURCES ***
+
+https://mirrors.tuna.tsinghua.edu.cn/rubygems/
+PS C:\Users\zlx02\Desktop\每日公众号写文素材> bundle config mirror.https://rubygems.org https://mirrors.tuna.tsinghua.edu.cn/rubygems
+PS C:\Users\zlx02\Desktop\每日公众号写文素材> bundle install
+Fetching gem metadata from https://mirrors.tuna.tsinghua.edu.cn/rubygems/..........
+Resolving dependencies...
+Could not find compatible versions
+
+Because jekyll-assets >= 3.0.0 depends on jekyll >= 3.5, < 4.0
+  and Gemfile depends on jekyll ~> 4.3.2,
+  jekyll-assets >= 3.0.0 cannot be used.
+So, because Gemfile depends on jekyll-assets ~> 3.0,
+  version solving has failed.
+PS C:\Users\zlx02\Desktop\每日公众号写文素材> bundle exec jekyll serve --livereload
+Could not find gem 'minima (~> 2.5)' in locally installed gems.
+Run `bundle install` to install missing gems.
+PS C:\Users\zlx02\Desktop\每日公众号写文素材> bundle update
+Fetching gem metadata from https://mirrors.tuna.tsinghua.edu.cn/rubygems/..........
+Resolving dependencies...
+Could not find compatible versions
+
+Because jekyll-assets >= 3.0.0 depends on jekyll >= 3.5, < 4.0
+  and Gemfile depends on jekyll ~> 4.3.2,
+  jekyll-assets >= 3.0.0 cannot be used.
+So, because Gemfile depends on jekyll-assets ~> 3.0,
+  version solving has failed.
+PS C:\Users\zlx02\Desktop\每日公众号写文素材> bundle install
+Fetching gem metadata from https://mirrors.tuna.tsinghua.edu.cn/rubygems/..........
+Resolving dependencies...
+Could not find compatible versions
+
+Because jekyll-assets >= 3.0.0 depends on jekyll >= 3.5, < 4.0
+  and Gemfile depends on jekyll ~> 4.3.2,
+  jekyll-assets >= 3.0.0 cannot be used.
+So, because Gemfile depends on jekyll-assets ~> 3.0,
+  version solving has failed.
+PS C:\Users\zlx02\Desktop\每日公众号写文素材> bundle exec jekyll serve --livereload
+Could not find gem 'minima (~> 2.5)' in locally installed gems.
+Run `bundle install` to install missing gems.
+PS C:\Users\zlx02\Desktop\每日公众号写文素材> bundle exec jekyll serve --livereload --port 4001
+Could not find gem 'minima (~> 2.5)' in locally installed gems.
+Run `bundle install` to install missing gems.
+PS C:\Users\zlx02\Desktop\每日公众号写文素材> bundle clean --force
+Could not find gem 'minima (~> 2.5)' in locally installed gems.
+PS C:\Users\zlx02\Desktop\每日公众号写文素材> bundle install
+Fetching gem metadata from https://mirrors.tuna.tsinghua.edu.cn/rubygems/..
+
+
+Resolving dependencies...
+Fetching rake 13.2.1
+Installing rake 13.2.1
+Fetching base64 0.2.0
+Fetching bigdecimal 3.1.8
+Fetching benchmark 0.4.0
+Fetching connection_pool 2.4.1
+Fetching drb 2.2.1
+Fetching minitest 5.25.1
+Fetching uri 1.0.2
+Fetching logger 1.6.1
+Fetching securerandom 0.3.2
+Fetching foreman 0.87.2
+Fetching gemoji 4.1.0
+Fetching racc 1.8.1
+Fetching jekyll-paginate 1.1.0
+Fetching wdm 0.1.1
+Fetching tzinfo 2.0.6
+Installing base64 0.2.0
+Installing bigdecimal 3.1.8 with native extensions
+Installing benchmark 0.4.0
+Installing connection_pool 2.4.1
+Installing drb 2.2.1
+Installing logger 1.6.1
+Installing uri 1.0.2
+Installing minitest 5.25.1
+Installing securerandom 0.3.2
+Installing foreman 0.87.2
+Installing gemoji 4.1.0
+Installing racc 1.8.1 with native extensions
+Installing jekyll-paginate 1.1.0
+Installing tzinfo 2.0.6
+Installing wdm 0.1.1 with native extensions
+Fetching tzinfo-data 1.2024.2
+Installing tzinfo-data 1.2024.2
+Fetching nokogiri 1.16.7 (x64-mingw-ucrt)
+Installing nokogiri 1.16.7 (x64-mingw-ucrt)
+Fetching activesupport 8.0.0
+Fetching jekyll-compose 0.12.0
+Fetching jekyll-redirect-from 0.16.0
+Fetching jekyll-feed 0.17.0
+Fetching jekyll-seo-tag 2.8.0
+Fetching jekyll-sitemap 1.4.0
+Installing activesupport 8.0.0
+Installing jekyll-compose 0.12.0
+Installing jekyll-redirect-from 0.16.0
+Installing jekyll-feed 0.17.0
+Installing jekyll-seo-tag 2.8.0
+Installing jekyll-sitemap 1.4.0
+Fetching minima 2.5.2
+Installing minima 2.5.2
+Fetching html-pipeline 2.14.3
+Installing html-pipeline 2.14.3
+Fetching jekyll-mentions 1.6.0
+Fetching jemoji 0.13.0
+Installing jekyll-mentions 1.6.0
+Installing jemoji 0.13.0
+Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+
+    current directory: C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/wdm-0.1.1/ext/wdm
+C:/Ruby32-x64/bin/ruby.exe extconf.rb
+checking for -lkernel32... yes
+checking for windows.h... yes
+checking for ruby.h... yes
+checking for HAVE_RUBY_ENCODING_H... yes
+checking for rb_thread_call_without_gvl()... yes
+creating Makefile
+
+current directory: C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/wdm-0.1.1/ext/wdm
+make DESTDIR\= sitearchdir\=./.gem.20241120-37436-6qcpcx
+sitelibdir\=./.gem.20241120-37436-6qcpcx clean
+
+current directory: C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/wdm-0.1.1/ext/wdm
+make DESTDIR\= sitearchdir\=./.gem.20241120-37436-6qcpcx
+sitelibdir\=./.gem.20241120-37436-6qcpcx
+generating wdm_ext-x64-mingw-ucrt.def
+compiling entry.c
+compiling memory.c
+compiling monitor.c
+compiling queue.c
+compiling rb_change.c
+rb_change.c: In function 'extract_absolute_path_from_notification':
+rb_change.c:139:5: warning: 'RB_OBJ_TAINT' is deprecated: taintedness turned out
+to be a wrong idea. [-Wdeprecated-declarations]
+  139 |     OBJ_TAINT(path);
+      |     ^~~~~~~~~
+In file included from
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/core/rstring.h:30,
+from
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/arithmetic/char.h:29,
+from
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/arithmetic.h:24,
+                 from C:/Ruby32-x64/include/ruby-3.2.0/ruby/ruby.h:28,
+                 from C:/Ruby32-x64/include/ruby-3.2.0/ruby.h:38,
+                 from wdm.h:22,
+                 from rb_change.c:4:
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/fl_type.h:116:30: note: declared
+here
+  116 | #define RB_OBJ_TAINT         RB_OBJ_TAINT
+      |                              ^~~~~~~~~~~~
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/fl_type.h:852:1: note: in
+expansion of macro 'RB_OBJ_TAINT'
+  852 | RB_OBJ_TAINT(VALUE obj)
+      | ^~~~~~~~~~~~
+compiling rb_monitor.c
+rb_monitor.c: In function 'rb_monitor_run_bang':
+rb_monitor.c:509:29: error: implicit declaration of function
+'rb_thread_call_without_gvl' [-Wimplicit-function-declaration]
+509 |         waiting_succeeded = rb_thread_call_without_gvl(wait_for_changes,
+monitor->process_event, stop_monitoring, monitor);
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [Makefile:248：rb_monitor.o] 错误 1
+
+make failed, exit code 2
+
+Gem files will remain installed in
+C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/wdm-0.1.1 for inspection.
+Results logged to
+C:/Ruby32-x64/lib/ruby/gems/3.2.0/extensions/x64-mingw-ucrt/3.2.0/wdm-0.1.1/gem_make.out
+
+  C:/Ruby32-x64/lib/ruby/3.2.0/rubygems/ext/builder.rb:119:in `run'
+  C:/Ruby32-x64/lib/ruby/3.2.0/rubygems/ext/builder.rb:53:in `block in make'
+  C:/Ruby32-x64/lib/ruby/3.2.0/rubygems/ext/builder.rb:45:in `each'
+  C:/Ruby32-x64/lib/ruby/3.2.0/rubygems/ext/builder.rb:45:in `make'
+  C:/Ruby32-x64/lib/ruby/3.2.0/rubygems/ext/ext_conf_builder.rb:42:in `build'
+  C:/Ruby32-x64/lib/ruby/3.2.0/rubygems/ext/builder.rb:187:in `build_extension'
+C:/Ruby32-x64/lib/ruby/3.2.0/rubygems/ext/builder.rb:221:in `block in
+build_extensions'
+  C:/Ruby32-x64/lib/ruby/3.2.0/rubygems/ext/builder.rb:218:in `each'
+  C:/Ruby32-x64/lib/ruby/3.2.0/rubygems/ext/builder.rb:218:in `build_extensions'
+  C:/Ruby32-x64/lib/ruby/3.2.0/rubygems/installer.rb:846:in `build_extensions'
+C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/bundler-2.5.23/lib/bundler/rubygems_gem_installer.rb:111:in
+`build_extensions'
+C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/bundler-2.5.23/lib/bundler/rubygems_gem_installer.rb:30:in
+`install'
+C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/bundler-2.5.23/lib/bundler/source/rubygems.rb:205:in
+`install'
+C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/bundler-2.5.23/lib/bundler/installer/gem_installer.rb:55:in
+`install'
+C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/bundler-2.5.23/lib/bundler/installer/gem_installer.rb:17:in
+`install_from_spec'
+C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/bundler-2.5.23/lib/bundler/installer/parallel_installer.rb:133:in
+`do_install'
+C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/bundler-2.5.23/lib/bundler/installer/parallel_installer.rb:124:in
+`block in worker_pool'
+C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/bundler-2.5.23/lib/bundler/worker.rb:62:in
+`apply_func'
+C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/bundler-2.5.23/lib/bundler/worker.rb:57:in
+`block in process_queue'
+C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/bundler-2.5.23/lib/bundler/worker.rb:54:in
+`loop'
+C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/bundler-2.5.23/lib/bundler/worker.rb:54:in
+`process_queue'
+C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/bundler-2.5.23/lib/bundler/worker.rb:90:in
+`block (2 levels) in create_threads'
+
+An error occurred while installing wdm (0.1.1), and Bundler cannot continue.
+
+In Gemfile:
+  wdm
+PS C:\Users\zlx02\Desktop\每日公众号写文素材>  bundle exec jekyll serve --livereload
+Could not find gem 'wdm (~> 0.1.1) mingw, x64_mingw, mswin' in locally installed gems.
+Run `bundle install` to install missing gems.
+PS C:\Users\zlx02\Desktop\每日公众号写文素材> bundle install
+Fetching gem metadata from https://mirrors.tuna.tsinghua.edu.cn/rubygems/...
+
+
+Resolving dependencies...
+Installing wdm 0.1.1 with native extensions
+Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+
+    current directory: C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/wdm-0.1.1/ext/wdm
+C:/Ruby32-x64/bin/ruby.exe extconf.rb
+checking for -lkernel32... yes
+checking for windows.h... yes
+checking for ruby.h... yes
+checking for HAVE_RUBY_ENCODING_H... yes
+checking for rb_thread_call_without_gvl()... yes
+creating Makefile
+
+current directory: C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/wdm-0.1.1/ext/wdm
+make DESTDIR\= sitearchdir\=./.gem.20241120-3356-ainuab
+sitelibdir\=./.gem.20241120-3356-ainuab clean
+
+current directory: C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/wdm-0.1.1/ext/wdm
+make DESTDIR\= sitearchdir\=./.gem.20241120-3356-ainuab
+sitelibdir\=./.gem.20241120-3356-ainuab
+generating wdm_ext-x64-mingw-ucrt.def
+compiling entry.c
+compiling memory.c
+compiling monitor.c
+compiling queue.c
+compiling rb_change.c
+rb_change.c: In function 'extract_absolute_path_from_notification':
+rb_change.c:139:5: warning: 'RB_OBJ_TAINT' is deprecated: taintedness turned out
+to be a wrong idea. [-Wdeprecated-declarations]
+  139 |     OBJ_TAINT(path);
+      |     ^~~~~~~~~
+In file included from
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/core/rstring.h:30,
+from
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/arithmetic/char.h:29,
+from
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/arithmetic.h:24,
+                 from C:/Ruby32-x64/include/ruby-3.2.0/ruby/ruby.h:28,
+                 from C:/Ruby32-x64/include/ruby-3.2.0/ruby.h:38,
+                 from wdm.h:22,
+                 from rb_change.c:4:
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/fl_type.h:116:30: note: declared
+here
+  116 | #define RB_OBJ_TAINT         RB_OBJ_TAINT
+      |                              ^~~~~~~~~~~~
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/fl_type.h:852:1: note: in
+expansion of macro 'RB_OBJ_TAINT'
+  852 | RB_OBJ_TAINT(VALUE obj)
+      | ^~~~~~~~~~~~
+compiling rb_monitor.c
+rb_monitor.c: In function 'rb_monitor_run_bang':
+rb_monitor.c:509:29: error: implicit declaration of function
+'rb_thread_call_without_gvl' [-Wimplicit-function-declaration]
+509 |         waiting_succeeded = rb_thread_call_without_gvl(wait_for_changes,
+monitor->process_event, stop_monitoring, monitor);
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [Makefile:248：rb_monitor.o] 错误 1
+
+make failed, exit code 2
+
+Gem files will remain installed in
+C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/wdm-0.1.1 for inspection.
+Results logged to
+C:/Ruby32-x64/lib/ruby/gems/3.2.0/extensions/x64-mingw-ucrt/3.2.0/wdm-0.1.1/gem_make.out
+
+  C:/Ruby32-x64/lib/ruby/3.2.0/rubygems/ext/builder.rb:119:in `run'
+  C:/Ruby32-x64/lib/ruby/3.2.0/rubygems/ext/builder.rb:53:in `block in make'
+  C:/Ruby32-x64/lib/ruby/3.2.0/rubygems/ext/builder.rb:45:in `each'
+  C:/Ruby32-x64/lib/ruby/3.2.0/rubygems/ext/builder.rb:45:in `make'
+  C:/Ruby32-x64/lib/ruby/3.2.0/rubygems/ext/ext_conf_builder.rb:42:in `build'
+  C:/Ruby32-x64/lib/ruby/3.2.0/rubygems/ext/builder.rb:187:in `build_extension'
+C:/Ruby32-x64/lib/ruby/3.2.0/rubygems/ext/builder.rb:221:in `block in
+build_extensions'
+  C:/Ruby32-x64/lib/ruby/3.2.0/rubygems/ext/builder.rb:218:in `each'
+  C:/Ruby32-x64/lib/ruby/3.2.0/rubygems/ext/builder.rb:218:in `build_extensions'
+  C:/Ruby32-x64/lib/ruby/3.2.0/rubygems/installer.rb:846:in `build_extensions'
+C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/bundler-2.5.23/lib/bundler/rubygems_gem_installer.rb:111:in
+`build_extensions'
+C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/bundler-2.5.23/lib/bundler/rubygems_gem_installer.rb:30:in
+`install'
+C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/bundler-2.5.23/lib/bundler/source/rubygems.rb:205:in
+`install'
+C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/bundler-2.5.23/lib/bundler/installer/gem_installer.rb:55:in
+`install'
+C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/bundler-2.5.23/lib/bundler/installer/gem_installer.rb:17:in
+`install_from_spec'
+C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/bundler-2.5.23/lib/bundler/installer/parallel_installer.rb:133:in
+`do_install'
+C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/bundler-2.5.23/lib/bundler/installer/parallel_installer.rb:124:in
+`block in worker_pool'
+C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/bundler-2.5.23/lib/bundler/worker.rb:62:in
+`apply_func'
+C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/bundler-2.5.23/lib/bundler/worker.rb:57:in
+`block in process_queue'
+C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/bundler-2.5.23/lib/bundler/worker.rb:54:in
+`loop'
+C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/bundler-2.5.23/lib/bundler/worker.rb:54:in
+`process_queue'
+C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/bundler-2.5.23/lib/bundler/worker.rb:90:in
+`block (2 levels) in create_threads'
+
+An error occurred while installing wdm (0.1.1), and Bundler cannot continue.
+
+In Gemfile:
+  wdm
+PS C:\Users\zlx02\Desktop\每日公众号写文素材> del Gemfile.lock
+del : 找不到路径“C:\Users\zlx02\Desktop\每日公众号写文素材\Gemfile.lock”，因为该路径不存在。
+所在位置 行:1 字符: 1
++ del Gemfile.lock
++ ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\zlx02\...素材\Gemfile.lock:String) [Remove-Item], ItemNotFoundE
+x    ception
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.RemoveItemCommand
+
+PS C:\Users\zlx02\Desktop\每日公众号写文素材> bundle clean --force
+Resolving dependencies...
+Removing activesupport (8.0.0)
+Removing base64 (0.2.0)
+Removing benchmark (0.4.0)
+Removing bigdecimal (3.1.3)
+Removing bundler (2.4.19)
+Removing connection_pool (2.4.1)
+Removing debug (1.7.1)
+Removing drb (2.2.1)
+Removing foreman (0.87.2)
+Removing gemoji (4.1.0)
+Removing html-pipeline (2.14.3)
+Removing jekyll-compose (0.12.0)
+Removing jekyll-mentions (1.6.0)
+Removing jekyll-redirect-from (0.16.0)
+Removing jemoji (0.13.0)
+Removing logger (1.6.1)
+Removing matrix (0.4.2)
+Removing minitest (5.16.3)
+Removing minitest (5.25.1)
+Removing net-ftp (0.2.1)
+Removing net-imap (0.3.4.1)
+Removing net-pop (0.1.2)
+Removing net-smtp (0.3.4)
+Removing nokogiri-1.16.7-x64-mingw (ucrt)
+Removing power_assert (2.0.3)
+Removing prime (0.1.2)
+Removing racc (1.8.1)
+Removing rake (13.0.6)
+Removing rbs (2.8.2)
+Removing rss (0.3.1)
+Removing securerandom (0.3.2)
+Removing test-unit (3.5.7)
+Removing typeprof (0.21.3)
+Removing uri (1.0.2)
+Removing wdm (0.1.1)
+PS C:\Users\zlx02\Desktop\每日公众号写文素材> bundle install
+Fetching gem metadata from https://mirrors.tuna.tsinghua.edu.cn/rubygems/....
+
+
+Resolving dependencies...
+Bundle complete! 9 Gemfile dependencies, 39 gems now installed.
+Use `bundle info [gemname]` to see where a bundled gem is installed.
+PS C:\Users\zlx02\Desktop\每日公众号写文素材>  bundle exec jekyll serve
+Configuration file: C:/Users/zlx02/Desktop/每日公众号写文素材/_config.yml
+  Dependency Error: Yikes! It looks like you don't have jekyll-redirect-from or one of its dependencies installed. In order to use Jekyll as currently configured, you'll need to install this gem. If you've run Jekyll with `bundle exec`, ensure that you have included the jekyll-redirect-from gem in your Gemfile as well. The full error message from Ruby is: 'cannot load such file -- jekyll-redirect-from' If you run into trouble, you can find helpful resources at https://jekyllrb.com/help/!
+                    ------------------------------------------------
+      Jekyll 4.3.4   Please append `--trace` to the `serve` command
+                     for any additional information or backtrace.
+                    ------------------------------------------------
+C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/external.rb:70:in `rescue in block in require_with_graceful_fail': jekyll-redirect-from (Jekyll::Errors::MissingDependencyException)
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/external.rb:56:in `block in require_with_graceful_fail'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/external.rb:55:in `each'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/external.rb:55:in `require_with_graceful_fail'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/plugin_manager.rb:30:in `require_gems'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/plugin_manager.rb:22:in `conscientious_require'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/site.rb:131:in `setup'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/site.rb:36:in `initialize'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/commands/build.rb:30:in `new'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/commands/build.rb:30:in `process'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/command.rb:91:in `block in process_with_graceful_fail'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/command.rb:91:in `each'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/command.rb:91:in `process_with_graceful_fail'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/commands/serve.rb:86:in `block (2 levels) in init_with_program'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `block in execute'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `each'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `execute'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/mercenary-0.4.0/lib/mercenary/program.rb:44:in `go'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/mercenary-0.4.0/lib/mercenary.rb:21:in `program'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/exe/jekyll:15:in `<top (required)>'
+        from C:/Ruby32-x64/bin/jekyll:32:in `load'
+        from C:/Ruby32-x64/bin/jekyll:32:in `<main>'
+<internal:C:/Ruby32-x64/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require': cannot load such file -- jekyll-redirect-from (LoadError)
+Did you mean?  jekyll/renderer
+        from <internal:C:/Ruby32-x64/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/external.rb:57:in `block in require_with_graceful_fail'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/external.rb:55:in `each'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/external.rb:55:in `require_with_graceful_fail'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/plugin_manager.rb:30:in `require_gems'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/plugin_manager.rb:22:in `conscientious_require'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/site.rb:131:in `setup'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/site.rb:36:in `initialize'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/commands/build.rb:30:in `new'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/commands/build.rb:30:in `process'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/command.rb:91:in `block in process_with_graceful_fail'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/command.rb:91:in `each'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/command.rb:91:in `process_with_graceful_fail'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/commands/serve.rb:86:in `block (2 levels) in init_with_program'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `block in execute'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `each'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `execute'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/mercenary-0.4.0/lib/mercenary/program.rb:44:in `go'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/mercenary-0.4.0/lib/mercenary.rb:21:in `program'
+        from C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/exe/jekyll:15:in `<top (required)>'
+        from C:/Ruby32-x64/bin/jekyll:32:in `load'
+        from C:/Ruby32-x64/bin/jekyll:32:in `<main>'
+PS C:\Users\zlx02\Desktop\每日公众号写文素材> bundle exec jekyll serve
+Configuration file: C:/Users/zlx02/Desktop/每日公众号写文素材/_config.yml
+            Source: C:/Users/zlx02/Desktop/每日公众号写文素材
+       Destination: C:/Users/zlx02/Desktop/每日公众号写文素材/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating...
+        Pagination: Pagination is enabled, but I couldn't find an index.html page to use as the pagination template. Skipping pagination.
+       Jekyll Feed: Generating feed for posts
+Deprecation Warning: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+1 │ @import "minima";
+  │         ^^^^^^^^
+  ╵
+    C:\Users\zlx02\Desktop\每日公众号写文素材\assets\css\style.scss 1:9  root stylesheet
+Deprecation Warning: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+48 │   "minima/base",
+   │   ^^^^^^^^^^^^^
+   ╵
+    minima.scss 48:3                                            @import
+    C:\Users\zlx02\Desktop\每日公众号写文素材\assets\css\style.scss 1:9  root stylesheet
+Deprecation Warning: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+49 │   "minima/layout",
+   │   ^^^^^^^^^^^^^^^
+   ╵
+    minima.scss 49:3                                            @import
+    C:\Users\zlx02\Desktop\每日公众号写文素材\assets\css\style.scss 1:9  root stylesheet
+Deprecation Warning: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+50 │   "minima/syntax-highlighting"
+   │   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    minima.scss 50:3                                            @import
+    C:\Users\zlx02\Desktop\每日公众号写文素材\assets\css\style.scss 1:9  root stylesheet
+Deprecation Warning: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use color.adjust instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+18 │ $grey-color-light: lighten($grey-color, 40%) !default;
+   │                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    minima.scss 18:20                                           @import
+    C:\Users\zlx02\Desktop\每日公众号写文素材\assets\css\style.scss 1:9  root stylesheet
+Deprecation Warning: lighten() is deprecated. Suggestions:
+
+color.scale($color, $lightness: 81.6%)
+color.adjust($color, $lightness: 40%)
+
+More info: https://sass-lang.com/d/color-functions
+
+   ╷
+18 │ $grey-color-light: lighten($grey-color, 40%) !default;
+   │                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    minima.scss 18:20                                           @import
+    C:\Users\zlx02\Desktop\每日公众号写文素材\assets\css\style.scss 1:9  root stylesheet
+Deprecation Warning: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use color.adjust instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+19 │ $grey-color-dark:  darken($grey-color, 25%) !default;
+   │                    ^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    minima.scss 19:20                                           @import
+    C:\Users\zlx02\Desktop\每日公众号写文素材\assets\css\style.scss 1:9  root stylesheet
+Deprecation Warning: darken() is deprecated. Suggestions:
+
+color.scale($color, $lightness: -49.0384615385%)
+color.adjust($color, $lightness: -25%)
+
+More info: https://sass-lang.com/d/color-functions
+
+   ╷
+19 │ $grey-color-dark:  darken($grey-color, 25%) !default;
+   │                    ^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    minima.scss 19:20                                           @import
+    C:\Users\zlx02\Desktop\每日公众号写文素材\assets\css\style.scss 1:9  root stylesheet
+Deprecation Warning: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use color.adjust instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+    ╷
+110 │     color: darken($brand-color, 15%);
+    │            ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ╵
+    ..\..\..\..\minima-2.5.2\_sass\minima\_base.scss 110:12     @import
+    minima.scss 48:3                                            @import
+    C:\Users\zlx02\Desktop\每日公众号写文素材\assets\css\style.scss 1:9  root stylesheet
+Deprecation Warning: darken() is deprecated. Suggestions:
+
+color.scale($color, $lightness: -28.5447761194%)
+color.adjust($color, $lightness: -15%)
+
+More info: https://sass-lang.com/d/color-functions
+
+    ╷
+110 │     color: darken($brand-color, 15%);
+    │            ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ╵
+    ..\..\..\..\minima-2.5.2\_sass\minima\_base.scss 110:12     @import
+    minima.scss 48:3                                            @import
+    C:\Users\zlx02\Desktop\每日公众号写文素材\assets\css\style.scss 1:9  root stylesheet
+Deprecation Warning: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use color.adjust instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+    ╷
+235 │   color: lighten($text-color, 18%);
+    │          ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ╵
+    ..\..\..\..\minima-2.5.2\_sass\minima\_base.scss 235:10     @import
+    minima.scss 48:3                                            @import
+    C:\Users\zlx02\Desktop\每日公众号写文素材\assets\css\style.scss 1:9  root stylesheet
+Deprecation Warning: lighten() is deprecated. Suggestions:
+
+color.scale($color, $lightness: 19.2857142857%)
+color.adjust($color, $lightness: 18%)
+
+More info: https://sass-lang.com/d/color-functions
+
+    ╷
+235 │   color: lighten($text-color, 18%);
+    │          ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ╵
+    ..\..\..\..\minima-2.5.2\_sass\minima\_base.scss 235:10     @import
+    minima.scss 48:3                                            @import
+    C:\Users\zlx02\Desktop\每日公众号写文素材\assets\css\style.scss 1:9  root stylesheet
+Deprecation Warning: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use color.adjust instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+    ╷
+240 │       background-color: lighten($grey-color-light, 6%);
+    │                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ╵
+    ..\..\..\..\minima-2.5.2\_sass\minima\_base.scss 240:25     @import
+    minima.scss 48:3                                            @import
+    C:\Users\zlx02\Desktop\每日公众号写文素材\assets\css\style.scss 1:9  root stylesheet
+Deprecation Warning: lighten() is deprecated. Suggestions:
+
+color.scale($color, $lightness: 66.5217391304%)
+color.adjust($color, $lightness: 6%)
+
+More info: https://sass-lang.com/d/color-functions
+
+    ╷
+240 │       background-color: lighten($grey-color-light, 6%);
+    │                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ╵
+    ..\..\..\..\minima-2.5.2\_sass\minima\_base.scss 240:25     @import
+    minima.scss 48:3                                            @import
+    C:\Users\zlx02\Desktop\每日公众号写文素材\assets\css\style.scss 1:9  root stylesheet
+Warning: 8 repetitive deprecation warnings omitted.
+Run in verbose mode to see all warnings.
+Deprecation Warning: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+1 │ @import "minima";
+  │         ^^^^^^^^
+  ╵
+    C:\Users\zlx02\Desktop\每日公众号写文素材\assets\main.scss 1:9  root stylesheet
+Deprecation Warning: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+48 │   "minima/base",
+   │   ^^^^^^^^^^^^^
+   ╵
+    minima.scss 48:3                                       @import
+    C:\Users\zlx02\Desktop\每日公众号写文素材\assets\main.scss 1:9  root stylesheet
+Deprecation Warning: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+49 │   "minima/layout",
+   │   ^^^^^^^^^^^^^^^
+   ╵
+    minima.scss 49:3                                       @import
+    C:\Users\zlx02\Desktop\每日公众号写文素材\assets\main.scss 1:9  root stylesheet
+Deprecation Warning: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+50 │   "minima/syntax-highlighting"
+   │   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    minima.scss 50:3                                       @import
+    C:\Users\zlx02\Desktop\每日公众号写文素材\assets\main.scss 1:9  root stylesheet
+Deprecation Warning: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use color.adjust instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+18 │ $grey-color-light: lighten($grey-color, 40%) !default;
+   │                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    minima.scss 18:20                                      @import
+    C:\Users\zlx02\Desktop\每日公众号写文素材\assets\main.scss 1:9  root stylesheet
+Deprecation Warning: lighten() is deprecated. Suggestions:
+
+color.scale($color, $lightness: 81.6%)
+color.adjust($color, $lightness: 40%)
+
+More info: https://sass-lang.com/d/color-functions
+
+   ╷
+18 │ $grey-color-light: lighten($grey-color, 40%) !default;
+   │                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    minima.scss 18:20                                      @import
+    C:\Users\zlx02\Desktop\每日公众号写文素材\assets\main.scss 1:9  root stylesheet
+Deprecation Warning: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use color.adjust instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+   ╷
+19 │ $grey-color-dark:  darken($grey-color, 25%) !default;
+   │                    ^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    minima.scss 19:20                                      @import
+    C:\Users\zlx02\Desktop\每日公众号写文素材\assets\main.scss 1:9  root stylesheet
+Deprecation Warning: darken() is deprecated. Suggestions:
+
+color.scale($color, $lightness: -49.0384615385%)
+color.adjust($color, $lightness: -25%)
+
+More info: https://sass-lang.com/d/color-functions
+
+   ╷
+19 │ $grey-color-dark:  darken($grey-color, 25%) !default;
+   │                    ^^^^^^^^^^^^^^^^^^^^^^^^
+   ╵
+    minima.scss 19:20                                      @import
+    C:\Users\zlx02\Desktop\每日公众号写文素材\assets\main.scss 1:9  root stylesheet
+Deprecation Warning: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use color.adjust instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+    ╷
+110 │     color: darken($brand-color, 15%);
+    │            ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ╵
+    ..\..\..\..\minima-2.5.2\_sass\minima\_base.scss 110:12  @import
+    minima.scss 48:3                                         @import
+    C:\Users\zlx02\Desktop\每日公众号写文素材\assets\main.scss 1:9    root stylesheet
+Deprecation Warning: darken() is deprecated. Suggestions:
+
+color.scale($color, $lightness: -28.5447761194%)
+color.adjust($color, $lightness: -15%)
+
+More info: https://sass-lang.com/d/color-functions
+
+    ╷
+110 │     color: darken($brand-color, 15%);
+    │            ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ╵
+    ..\..\..\..\minima-2.5.2\_sass\minima\_base.scss 110:12  @import
+    minima.scss 48:3                                         @import
+    C:\Users\zlx02\Desktop\每日公众号写文素材\assets\main.scss 1:9    root stylesheet
+Deprecation Warning: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use color.adjust instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+    ╷
+235 │   color: lighten($text-color, 18%);
+    │          ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ╵
+    ..\..\..\..\minima-2.5.2\_sass\minima\_base.scss 235:10  @import
+    minima.scss 48:3                                         @import
+    C:\Users\zlx02\Desktop\每日公众号写文素材\assets\main.scss 1:9    root stylesheet
+Deprecation Warning: lighten() is deprecated. Suggestions:
+
+color.scale($color, $lightness: 19.2857142857%)
+color.adjust($color, $lightness: 18%)
+
+More info: https://sass-lang.com/d/color-functions
+
+    ╷
+235 │   color: lighten($text-color, 18%);
+    │          ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ╵
+    ..\..\..\..\minima-2.5.2\_sass\minima\_base.scss 235:10  @import
+    minima.scss 48:3                                         @import
+    C:\Users\zlx02\Desktop\每日公众号写文素材\assets\main.scss 1:9    root stylesheet
+Deprecation Warning: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use color.adjust instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+    ╷
+240 │       background-color: lighten($grey-color-light, 6%);
+    │                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ╵
+    ..\..\..\..\minima-2.5.2\_sass\minima\_base.scss 240:25  @import
+    minima.scss 48:3                                         @import
+    C:\Users\zlx02\Desktop\每日公众号写文素材\assets\main.scss 1:9    root stylesheet
+Deprecation Warning: lighten() is deprecated. Suggestions:
+
+color.scale($color, $lightness: 66.5217391304%)
+color.adjust($color, $lightness: 6%)
+
+More info: https://sass-lang.com/d/color-functions
+
+    ╷
+240 │       background-color: lighten($grey-color-light, 6%);
+    │                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ╵
+    ..\..\..\..\minima-2.5.2\_sass\minima\_base.scss 240:25  @import
+    minima.scss 48:3                                         @import
+    C:\Users\zlx02\Desktop\每日公众号写文素材\assets\main.scss 1:9    root stylesheet
+Warning: 6 repetitive deprecation warnings omitted.
+Run in verbose mode to see all warnings.
+                    done in 5.051 seconds.
+  Please add the following to your Gemfile to avoid polling for changes:
+    gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+ Auto-regeneration: enabled for 'C:/Users/zlx02/Desktop/每日公众号写文素材'
+    Server address: http://127.0.0.1:4000/
+  Server running... press ctrl-c to stop.
+[2024-11-20 02:29:51] ERROR `/assets/images/featured-image.jpg' not found.
+[2024-11-20 02:29:54] ERROR `/favicon.ico' not found.
+[2024-11-20 02:44:07] ERROR `/assets/images/projects/smart-home-banner.jpg' not found.
+[2024-11-20 02:44:07] ERROR `/assets/images/projects/markdown-editor.jpg' not found.
+[2024-11-20 02:44:08] ERROR `/assets/images/projects/ecommerce.jpg' not found.
+[2024-11-20 02:44:08] ERROR `/assets/images/projects/ai-research.jpg' not found.
+[2024-11-20 02:44:08] ERROR `/assets/images/projects/fastvalidate.jpg' not found.
+[2024-11-20 02:45:52] ERROR `/assets/images/featured-image.jpg' not found.
+[2024-11-20 02:48:28] ERROR `/assets/images/featured-image.jpg' not found.
+[2024-11-20 02:48:30] ERROR `/favicon.ico' not found.
+终止批处理操作吗(Y/N)? Y
+终止批处理操作吗(Y/N)? Y
+PS C:\Users\zlx02\Desktop\每日公众号写文素材>

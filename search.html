@@ -1,0 +1,59 @@
+---
+layout: page
+title: Search
+permalink: /search/
+---
+
+<div class="search-container">
+  <input type="text" id="search-input" placeholder="Search blog posts...">
+  <div id="search-results" class="search-results"></div>
+</div>
+
+<!-- Add search scripts -->
+<script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+<script src="{{ site.baseurl }}/assets/js/search.js"></script>
+
+<style>
+.search-container {
+  margin: 20px 0;
+}
+
+#search-input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.search-results {
+  margin-top: 20px;
+}
+
+.search-result {
+  margin: 20px 0;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.search-result:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+}
+
+.search-result a {
+  color: #2a7ae2;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.search-result p {
+  color: #666;
+  margin-top: 10px;
+}
+</style>

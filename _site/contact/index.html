@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Me - My Tech Blog</title>
+  <meta name="description" content="Get in touch with me for collaborations, questions, or just to say hi!">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/forms.css">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  
+  
+  <!-- reCAPTCHA -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrapper">
+      <a class="site-title" href="/">My Tech Blog</a>
+      <nav class="site-nav">
+        <a href="/about">About</a>
+        <a href="/projects">Projects</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-content" aria-label="Content">
+    <div class="page-content">
+  <div class="wrapper">
+    <article class="post">
+      <header class="post-header">
+        <h1 class="post-title">Contact Me</h1>
+        
+        <p class="post-description">Get in touch with me for collaborations, questions, or just to say hi!</p>
+        
+      </header>
+
+      <div class="post-content">
+        <div class="contact-page">
+  <div class="contact-intro">
+    <h2>Let's Connect!</h2>
+    <p>I'm always interested in hearing about new projects, opportunities, or just having a friendly chat about technology and development.</p>
+  </div>
+
+  <div class="contact-form-container">
+    <form action="https://formspree.io/f/xbjnkwlk" method="POST" class="contact-form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required="" class="form-control" />
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="_replyto" required="" class="form-control" />
+      </div>
+      
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" required="" class="form-control" />
+      </div>
+      
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required="" class="form-control"></textarea>
+      </div>
+      
+      <div class="g-recaptcha" data-sitekey="6LfqkIQqAAAAAJkq9CyY7JpRy4LhgQVS6esGpb_9"></div>
+      <small class="privacy-notice">By submitting this form, you agree to our <a href="/privacy-policy">Privacy Policy</a>.</small>
+      
+      <input type="hidden" name="_subject" value="New Contact Form Submission" />
+      <input type="hidden" name="_next" value="http://localhost:4000/thank-you" />
+      
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+  </div>
+
+  <div class="alternative-contact">
+    <h3>Other Ways to Reach Me</h3>
+    <div class="social-links">
+      
+        <a href="https://github.com/tech-explorer" class="social-link github" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      
+      
+      
+        <a href="https://twitter.com/techexplorer" class="social-link twitter" target="_blank" rel="noopener">
+          <i class="fab fa-twitter"></i> Twitter
+        </a>
+      
+      
+      
+        <a href="https://linkedin.com/in/techexplorer" class="social-link linkedin" target="_blank" rel="noopener">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+      
+    </div>
+  </div>
+  
+  <script src="https://www.google.com/recaptcha/api.js" async="" defer=""></script>
+</div>
+
+      </div>
+    </article>
+  </div>
+</div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrapper">
+      <div class="footer-content">
+        <p>&copy; 2024 Tech Explorer. All rights reserved.</p>
+        <div class="social-links">
+          
+          <a href="https://github.com/tech-explorer" target="_blank" rel="noopener">
+            <i class="fab fa-github"></i>
+          </a>
+          
+          
+          
+          <a href="https://twitter.com/techexplorer" target="_blank" rel="noopener">
+            <i class="fab fa-twitter"></i>
+          </a>
+          
+          
+          
+          <a href="https://linkedin.com/in/techexplorer" target="_blank" rel="noopener">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  
+  <!-- Form Validation Script -->
+  <script src="/assets/js/form-validation.js"></script>
+  
+</body>
+</html>

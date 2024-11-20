@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-11-20T18:46:17+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">My Tech Blog</title><subtitle>Exploring Technology and Development</subtitle><author><name>Tech Explorer</name><email>contact@techblog.com</email></author><entry><title type="html">Beautiful Places Around the World</title><link href="http://localhost:4000/2024/01/10/photo-gallery-post/" rel="alternate" type="text/html" title="Beautiful Places Around the World" /><published>2024-01-10T00:00:00+08:00</published><updated>2024-01-10T00:00:00+08:00</updated><id>http://localhost:4000/2024/01/10/photo-gallery-post</id><content type="html" xml:base="http://localhost:4000/2024/01/10/photo-gallery-post/"><![CDATA[<p>Welcome to our photo journey around the world! In this post, we’ll explore some of the most iconic landmarks and beautiful places across different continents.</p>
+
+<h2 id="europe-the-city-of-light">Europe: The City of Light</h2>
+
+<p>Paris, often called the City of Light, is known for its romantic atmosphere and iconic architecture. The Eiffel Tower, standing proud against the night sky, is a testament to human engineering and artistic vision.</p>
+
+<h2 id="asia-the-future-is-now">Asia: The Future is Now</h2>
+
+<p>Tokyo represents the perfect blend of tradition and innovation. The famous Shibuya Crossing, known as the busiest pedestrian crossing in the world, showcases the energy and vitality of modern Japan.</p>
+
+<h2 id="north-america-urban-oasis">North America: Urban Oasis</h2>
+
+<p>New York City’s Central Park is a masterpiece of landscape architecture. This urban oasis provides a much-needed escape from the concrete jungle, offering both residents and visitors a place to reconnect with nature.</p>
+
+<h2 id="australia-harbor-city">Australia: Harbor City</h2>
+
+<p>The Sydney Opera House is not just a building; it’s a symbol of human creativity and architectural innovation. Its unique design has made it one of the most recognizable buildings in the world.</p>
+
+<h2 id="photography-tips">Photography Tips</h2>
+
+<p>When capturing these iconic locations, consider:</p>
+<ol>
+  <li>Time of day - Golden hour provides the best lighting</li>
+  <li>Composition - Use leading lines and the rule of thirds</li>
+  <li>Perspective - Try different angles to create unique shots</li>
+  <li>Weather conditions - Sometimes bad weather creates dramatic photos</li>
+  <li>Local culture - Include elements that tell a story about the place</li>
+</ol>
+
+<p>Remember to respect local customs and obtain necessary permits when photographing in public spaces.</p>]]></content><author><name>Tech Explorer</name><email>contact@techblog.com</email></author><category term="Travel" /><category term="Photography" /><category term="travel" /><category term="photography" /><category term="nature" /><category term="cities" /><summary type="html"><![CDATA[Welcome to our photo journey around the world! In this post, we’ll explore some of the most iconic landmarks and beautiful places across different continents.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/featured-image.jpg" /><media:content medium="image" url="http://localhost:4000/assets/images/featured-image.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">5 Essential Productivity Tips for Developers</title><link href="http://localhost:4000/2024/01/09/productivity-tips/" rel="alternate" type="text/html" title="5 Essential Productivity Tips for Developers" /><published>2024-01-09T16:00:00+08:00</published><updated>2024-01-09T16:00:00+08:00</updated><id>http://localhost:4000/2024/01/09/productivity-tips</id><content type="html" xml:base="http://localhost:4000/2024/01/09/productivity-tips/"><![CDATA[<p>As developers, we’re constantly looking for ways to improve our productivity while maintaining code quality. Here are five essential tips that have helped me stay productive and focused.</p>
+
+<h2 id="1-the-pomodoro-technique">1. The Pomodoro Technique</h2>
+
+<p>The Pomodoro Technique is a time management method that uses a timer to break work into focused 25-minute intervals, separated by short breaks. Here’s how I implement it:</p>
+
+<ul>
+  <li>25 minutes of focused work</li>
+  <li>5-minute break</li>
+  <li>After 4 pomodoros, take a longer 15-30 minute break</li>
+</ul>
+
+<p>This helps maintain high concentration levels while preventing burnout.</p>
+
+<h2 id="2-organize-your-development-environment">2. Organize Your Development Environment</h2>
+
+<p>A clean and organized development environment is crucial for productivity:</p>
+
+<ul>
+  <li>Use a consistent file naming convention</li>
+  <li>Keep your desktop clutter-free</li>
+  <li>Organize your code editor with essential extensions</li>
+  <li>Set up keyboard shortcuts for common tasks</li>
+</ul>
+
+<h2 id="3-practice-time-blocking">3. Practice Time Blocking</h2>
+
+<p>Time blocking involves dedicating specific time slots to particular tasks:</p>
+
+<ul>
+  <li>9:00-10:30: Deep coding work</li>
+  <li>10:30-11:00: Code review</li>
+  <li>11:00-12:00: Team meetings</li>
+  <li>etc.</li>
+</ul>
+
+<p>This helps reduce context switching and improves focus.</p>
+
+<h2 id="4-regular-code-reviews">4. Regular Code Reviews</h2>
+
+<p>Code reviews aren’t just for team projects. Even for personal projects:</p>
+
+<ul>
+  <li>Review your code after completion</li>
+  <li>Use linters and formatters</li>
+  <li>Document your code as you write</li>
+  <li>Take breaks before reviewing your own code</li>
+</ul>
+
+<h2 id="5-maintain-work-life-balance">5. Maintain Work-Life Balance</h2>
+
+<p>Remember that productivity isn’t just about working more:</p>
+
+<ul>
+  <li>Set clear boundaries between work and personal time</li>
+  <li>Take regular breaks</li>
+  <li>Exercise regularly</li>
+  <li>Get enough sleep</li>
+  <li>Practice mindfulness or meditation</li>
+</ul>
+
+<h2 id="implementing-these-tips">Implementing These Tips</h2>
+
+<p>Start by implementing one tip at a time. Try each for a week and adjust based on what works best for you. Remember, productivity is personal - what works for others might not work for you.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Productivity isn’t about working longer hours; it’s about working smarter. These tips have helped me maintain a healthy balance between productivity and well-being. What productivity tips work best for you? Share in the comments below!</p>]]></content><author><name>Tech Explorer</name><email>contact@techblog.com</email></author><category term="lifestyle" /><category term="productivity" /><category term="productivity" /><category term="work-life-balance" /><category term="developer-tips" /><summary type="html"><![CDATA[As developers, we’re constantly looking for ways to improve our productivity while maintaining code quality. Here are five essential tips that have helped me stay productive and focused.]]></summary></entry><entry><title type="html">Mastering Markdown: A Complete Guide</title><link href="http://localhost:4000/2024/01/09/mastering-markdown/" rel="alternate" type="text/html" title="Mastering Markdown: A Complete Guide" /><published>2024-01-09T15:00:00+08:00</published><updated>2024-01-09T15:00:00+08:00</updated><id>http://localhost:4000/2024/01/09/mastering-markdown</id><content type="html" xml:base="http://localhost:4000/2024/01/09/mastering-markdown/"><![CDATA[<p>Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents. In this guide, we’ll explore everything you need to know about Markdown.</p>
+
+<h2 id="basic-syntax">Basic Syntax</h2>
+
+<h3 id="headers">Headers</h3>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh"># H1</span>
+<span class="gu">## H2</span>
+<span class="gu">### H3</span>
+</code></pre></div></div>
+
+<h3 id="emphasis">Emphasis</h3>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="ge">*italic*</span> or _italic_
+<span class="gs">**bold**</span> or __bold__
+<span class="ges">***bold italic***</span> or ___bold italic___
+</code></pre></div></div>
+
+<h3 id="lists">Lists</h3>
+
+<p>Ordered Lists:</p>
+<ol>
+  <li>First item</li>
+  <li>Second item</li>
+  <li>Third item</li>
+</ol>
+
+<p>Unordered Lists:</p>
+<ul>
+  <li>First item</li>
+  <li>Second item</li>
+  <li>Third item</li>
+</ul>
+
+<h3 id="links-and-images">Links and Images</h3>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="nv">Link Text</span><span class="p">](</span><span class="sx">URL</span><span class="p">)</span>
+<span class="p">![</span><span class="nv">Alt Text</span><span class="p">](</span><span class="sx">Image</span> URL)
+</code></pre></div></div>
+
+<h2 id="advanced-features">Advanced Features</h2>
+
+<h3 id="code-blocks">Code Blocks</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">hello_world</span><span class="p">():</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Hello, World!</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="tables">Tables</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Header 1</th>
+      <th>Header 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Cell 1</td>
+      <td>Cell 2</td>
+    </tr>
+    <tr>
+      <td>Cell 3</td>
+      <td>Cell 4</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="task-lists">Task Lists</h3>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Write the introduction</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Add basic syntax</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Include advanced examples</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Add references</li>
+</ul>
+
+<h2 id="best-practices">Best Practices</h2>
+
+<ol>
+  <li><strong>Consistency</strong>: Use consistent formatting throughout your document</li>
+  <li><strong>Readability</strong>: Keep your markdown clean and organized</li>
+  <li><strong>Documentation</strong>: Always include examples with your markdown</li>
+</ol>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Markdown is an essential tool for writers, developers, and content creators. With these basics, you’re well on your way to creating beautiful documents!</p>]]></content><author><name>Tech Explorer</name><email>contact@techblog.com</email></author><category term="tutorials" /><category term="writing" /><category term="markdown" /><category term="writing" /><category term="documentation" /><summary type="html"><![CDATA[Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents. In this guide, we’ll explore everything you need to know about Markdown.]]></summary></entry><entry><title type="html">Getting Started with Jekyll: A Comprehensive Guide</title><link href="http://localhost:4000/2024/01/09/getting-started-with-jekyll/" rel="alternate" type="text/html" title="Getting Started with Jekyll: A Comprehensive Guide" /><published>2024-01-09T14:00:00+08:00</published><updated>2024-01-09T14:00:00+08:00</updated><id>http://localhost:4000/2024/01/09/getting-started-with-jekyll</id><content type="html" xml:base="http://localhost:4000/2024/01/09/getting-started-with-jekyll/"><![CDATA[<p>Jekyll is a powerful static site generator that makes it easy to create a beautiful website or blog. In this guide, we’ll explore the basics of Jekyll and how to get started with your first site.</p>
+
+<h2 id="what-is-jekyll">What is Jekyll?</h2>
+
+<p>Jekyll is a static site generator written in Ruby. It takes your content written in Markdown, passes it through templates, and generates a complete, static website ready to be served by any web server.</p>
+
+<h2 id="key-features">Key Features</h2>
+
+<ol>
+  <li><strong>Simple and Lightweight</strong>
+    <ul>
+      <li>No database required</li>
+      <li>Write content in Markdown</li>
+      <li>Easy to maintain</li>
+    </ul>
+  </li>
+  <li><strong>Flexible</strong>
+    <ul>
+      <li>Customize your site’s look and feel</li>
+      <li>Use themes or create your own</li>
+      <li>Extend functionality with plugins</li>
+    </ul>
+  </li>
+  <li><strong>GitHub Pages Integration</strong>
+    <ul>
+      <li>Free hosting on GitHub Pages</li>
+      <li>Automatic builds and deployment</li>
+      <li>Version control for your content</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<p>To create your first Jekyll site:</p>
+
+<ol>
+  <li>Install Jekyll:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem <span class="nb">install </span>bundler jekyll
+</code></pre></div>    </div>
+  </li>
+  <li>Create a new site:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll new my-awesome-site
+<span class="nb">cd </span>my-awesome-site
+</code></pre></div>    </div>
+  </li>
+  <li>Start the local server:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">exec </span>jekyll serve
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="next-steps">Next Steps</h2>
+
+<p>In future posts, we’ll explore:</p>
+<ul>
+  <li>Creating custom themes</li>
+  <li>Working with layouts and includes</li>
+  <li>Adding dynamic features</li>
+  <li>SEO optimization</li>
+</ul>
+
+<p>Stay tuned for more tutorials!</p>]]></content><author><name>Tech Explorer</name><email>contact@techblog.com</email></author><category term="tutorials" /><category term="web-development" /><category term="jekyll" /><category term="static-site" /><category term="markdown" /><category term="github-pages" /><summary type="html"><![CDATA[Jekyll is a powerful static site generator that makes it easy to create a beautiful website or blog. In this guide, we’ll explore the basics of Jekyll and how to get started with your first site.]]></summary></entry><entry><title type="html">Welcome to My Blog!</title><link href="http://localhost:4000/2024/01/09/welcome-to-my-blog/" rel="alternate" type="text/html" title="Welcome to My Blog!" /><published>2024-01-09T12:00:00+08:00</published><updated>2024-01-09T12:00:00+08:00</updated><id>http://localhost:4000/2024/01/09/welcome-to-my-blog</id><content type="html" xml:base="http://localhost:4000/2024/01/09/welcome-to-my-blog/"><![CDATA[<p>This is my first blog post! I’m excited to start sharing my thoughts and experiences here.</p>
+
+<h2 id="what-to-expect">What to Expect</h2>
+
+<p>In this blog, I’ll be writing about:</p>
+<ul>
+  <li>My experiences and learnings</li>
+  <li>Interesting topics I’m passionate about</li>
+  <li>Useful tips and tutorials</li>
+</ul>
+
+<p>Stay tuned for more content!</p>]]></content><author><name>Tech Explorer</name><email>contact@techblog.com</email></author><category term="general" /><summary type="html"><![CDATA[This is my first blog post! I’m excited to start sharing my thoughts and experiences here.]]></summary></entry></feed>

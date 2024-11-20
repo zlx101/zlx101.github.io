@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FastValidate.js - My Tech Blog</title>
+  <meta name="description" content="Exploring Technology and Development">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/forms.css">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  
+  
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrapper">
+      <a class="site-title" href="/">My Tech Blog</a>
+      <nav class="site-nav">
+        <a href="/about">About</a>
+        <a href="/projects">Projects</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-content" aria-label="Content">
+    <article class="project" itemscope itemtype="http://schema.org/CreativeWork">
+  <header class="project-header">
+    
+    <div class="project-banner">
+      <img src="/assets/images/projects/fastvalidate.jpg" alt="FastValidate.js" class="project-image">
+      
+      <figcaption>FastValidate.js Logo</figcaption>
+      
+    </div>
+    
+
+    <h1 class="project-title" itemprop="name">FastValidate.js</h1>
+    
+    <div class="project-meta">
+      
+      <span class="project-date">
+        <i class="far fa-calendar-alt"></i>
+        Jan 06, 2024
+      </span>
+      
+
+      
+      <span class="project-status active">
+        <i class="fas fa-circle"></i>
+        Active
+      </span>
+      
+
+      
+
+      
+    </div>
+
+    
+    <div class="project-technologies">
+      
+      <span class="tech-tag">TypeScript</span>
+      
+      <span class="tech-tag">Node.js</span>
+      
+      <span class="tech-tag">Jest</span>
+      
+      <span class="tech-tag">GitHub Actions</span>
+      
+      <span class="tech-tag">Webpack</span>
+      
+    </div>
+    
+  </header>
+
+  <div class="project-content" itemprop="articleBody">
+    <h2 id="project-overview">Project Overview</h2>
+
+<p>FastValidate.js is a high-performance, type-safe form validation library for JavaScript and TypeScript applications. It provides a simple, declarative API for complex validation scenarios while maintaining excellent runtime performance.</p>
+
+<h2 id="features">Features</h2>
+
+<h3 id="core-functionality">Core Functionality</h3>
+<ul>
+  <li>⚡ Blazing fast validation engine</li>
+  <li>🔒 Type-safe validation rules</li>
+  <li>📦 Zero dependencies</li>
+  <li>🎯 Tree-shakeable</li>
+  <li>🌐 Browser and Node.js support</li>
+</ul>
+
+<h3 id="advanced-features">Advanced Features</h3>
+<ul>
+  <li>Custom validation rules</li>
+  <li>Async validation support</li>
+  <li>Nested object validation</li>
+  <li>Array validation</li>
+  <li>Cross-field validation</li>
+  <li>Conditional validation</li>
+  <li>Internationalization</li>
+</ul>
+
+<h2 id="installation">Installation</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># npm</span>
+npm <span class="nb">install</span> @username/fastvalidate
+
+<span class="c"># yarn</span>
+yarn add @username/fastvalidate
+
+<span class="c"># pnpm</span>
+pnpm add @username/fastvalidate
+</code></pre></div></div>
+
+<h2 id="usage-example">Usage Example</h2>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">createValidator</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@username/fastvalidate</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="c1">// Define validation schema</span>
+<span class="kd">const</span> <span class="nx">userSchema</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">username</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span> <span class="na">rule</span><span class="p">:</span> <span class="dl">'</span><span class="s1">required</span><span class="dl">'</span><span class="p">,</span> <span class="na">message</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Username is required</span><span class="dl">'</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="na">rule</span><span class="p">:</span> <span class="dl">'</span><span class="s1">minLength</span><span class="dl">'</span><span class="p">,</span> <span class="na">value</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="na">message</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Username must be at least 3 characters</span><span class="dl">'</span> <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="na">email</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span> <span class="na">rule</span><span class="p">:</span> <span class="dl">'</span><span class="s1">required</span><span class="dl">'</span><span class="p">,</span> <span class="na">message</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Email is required</span><span class="dl">'</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="na">rule</span><span class="p">:</span> <span class="dl">'</span><span class="s1">email</span><span class="dl">'</span><span class="p">,</span> <span class="na">message</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Invalid email format</span><span class="dl">'</span> <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="na">age</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span> <span class="na">rule</span><span class="p">:</span> <span class="dl">'</span><span class="s1">number</span><span class="dl">'</span><span class="p">,</span> <span class="na">message</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Age must be a number</span><span class="dl">'</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="na">rule</span><span class="p">:</span> <span class="dl">'</span><span class="s1">min</span><span class="dl">'</span><span class="p">,</span> <span class="na">value</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span> <span class="na">message</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Must be 18 or older</span><span class="dl">'</span> <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">};</span>
+
+<span class="c1">// Create validator</span>
+<span class="kd">const</span> <span class="nx">validateUser</span> <span class="o">=</span> <span class="nf">createValidator</span><span class="p">(</span><span class="nx">userSchema</span><span class="p">);</span>
+
+<span class="c1">// Validate data</span>
+<span class="kd">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nf">validateUser</span><span class="p">({</span>
+  <span class="na">username</span><span class="p">:</span> <span class="dl">'</span><span class="s1">john</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">email</span><span class="p">:</span> <span class="dl">'</span><span class="s1">john@example.com</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">age</span><span class="p">:</span> <span class="mi">25</span>
+<span class="p">});</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">isValid</span><span class="p">);</span> <span class="c1">// true</span>
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">errors</span><span class="p">);</span>  <span class="c1">// {}</span>
+</code></pre></div></div>
+
+<h2 id="performance">Performance</h2>
+
+<h3 id="benchmark-results">Benchmark Results</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Library</th>
+      <th>Operations/sec</th>
+      <th>Memory Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>FastValidate</td>
+      <td>1,250,000</td>
+      <td>2.3KB</td>
+    </tr>
+    <tr>
+      <td>Competitor A</td>
+      <td>850,000</td>
+      <td>4.1KB</td>
+    </tr>
+    <tr>
+      <td>Competitor B</td>
+      <td>620,000</td>
+      <td>5.8KB</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="size-comparison">Size Comparison</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌────────────────┬────────────┬────────────┐
+│ Package        │ Minified   │ Gzipped    │
+├────────────────┼────────────┼────────────┤
+│ FastValidate   │ 8.2KB     │ 2.8KB      │
+│ Competitor A   │ 15.4KB    │ 5.1KB      │
+│ Competitor B   │ 22.1KB    │ 7.3KB      │
+└────────────────┴────────────┴────────────┘
+</code></pre></div></div>
+
+<h2 id="documentation">Documentation</h2>
+
+<h3 id="api-reference">API Reference</h3>
+
+<h4 id="createvalidatorschema-validationschema"><code class="language-plaintext highlighter-rouge">createValidator(schema: ValidationSchema)</code></h4>
+<p>Creates a validator function from a schema.</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">type</span> <span class="nx">ValidationSchema</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="p">[</span><span class="na">field</span><span class="p">:</span> <span class="kr">string</span><span class="p">]:</span> <span class="nx">ValidationRule</span><span class="p">[];</span>
+<span class="p">};</span>
+
+<span class="kd">type</span> <span class="nx">ValidationRule</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">rule</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">message</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+  <span class="nl">value</span><span class="p">?:</span> <span class="kr">any</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h4 id="built-in-rules">Built-in Rules</h4>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">required</code>: Field must not be empty</li>
+  <li><code class="language-plaintext highlighter-rouge">email</code>: Must be valid email format</li>
+  <li><code class="language-plaintext highlighter-rouge">minLength</code>: Minimum string length</li>
+  <li><code class="language-plaintext highlighter-rouge">maxLength</code>: Maximum string length</li>
+  <li><code class="language-plaintext highlighter-rouge">pattern</code>: Regex pattern match</li>
+  <li><code class="language-plaintext highlighter-rouge">number</code>: Must be a number</li>
+  <li><code class="language-plaintext highlighter-rouge">min</code>: Minimum number value</li>
+  <li><code class="language-plaintext highlighter-rouge">max</code>: Maximum number value</li>
+</ul>
+
+<h3 id="custom-rules">Custom Rules</h3>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">addRule</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@username/fastvalidate</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="nf">addRule</span><span class="p">(</span><span class="dl">'</span><span class="s1">password</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">value</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">hasUpperCase</span> <span class="o">=</span> <span class="sr">/</span><span class="se">[</span><span class="sr">A-Z</span><span class="se">]</span><span class="sr">/</span><span class="p">.</span><span class="nf">test</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
+  <span class="kd">const</span> <span class="nx">hasLowerCase</span> <span class="o">=</span> <span class="sr">/</span><span class="se">[</span><span class="sr">a-z</span><span class="se">]</span><span class="sr">/</span><span class="p">.</span><span class="nf">test</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
+  <span class="kd">const</span> <span class="nx">hasNumber</span> <span class="o">=</span> <span class="sr">/</span><span class="se">[</span><span class="sr">0-9</span><span class="se">]</span><span class="sr">/</span><span class="p">.</span><span class="nf">test</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
+  
+  <span class="k">return</span> <span class="nx">hasUpperCase</span> <span class="o">&amp;&amp;</span> <span class="nx">hasLowerCase</span> <span class="o">&amp;&amp;</span> <span class="nx">hasNumber</span><span class="p">;</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<h2 id="contributing">Contributing</h2>
+
+<p>We welcome contributions! Please see our <a href="CONTRIBUTING.md">Contributing Guide</a> for details.</p>
+
+<h3 id="development-setup">Development Setup</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Clone repository</span>
+git clone https://github.com/username/fastvalidate-js.git
+<span class="nb">cd </span>fastvalidate-js
+
+<span class="c"># Install dependencies</span>
+pnpm <span class="nb">install</span>
+
+<span class="c"># Run tests</span>
+pnpm <span class="nb">test</span>
+
+<span class="c"># Build library</span>
+pnpm build
+</code></pre></div></div>
+
+<h3 id="code-quality">Code Quality</h3>
+
+<ul>
+  <li>100% test coverage</li>
+  <li>ESLint configuration</li>
+  <li>Prettier formatting</li>
+  <li>Husky pre-commit hooks</li>
+  <li>Semantic versioning</li>
+</ul>
+
+<h2 id="community">Community</h2>
+
+<ul>
+  <li><a href="https://discord.gg/fastvalidate">Discord Server</a></li>
+  <li><a href="https://github.com/username/fastvalidate-js/discussions">GitHub Discussions</a></li>
+  <li><a href="https://stackoverflow.com/questions/tagged/fastvalidate">Stack Overflow</a></li>
+</ul>
+
+<h2 id="roadmap">Roadmap</h2>
+
+<h3 id="version-20">Version 2.0</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Schema composition</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Plugin system</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Runtime type inference</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Web worker support</li>
+</ul>
+
+<h3 id="future-plans">Future Plans</h3>
+<ul>
+  <li>GraphQL schema validation</li>
+  <li>React Native support</li>
+  <li>WebAssembly optimization</li>
+  <li>Schema visualization tools</li>
+</ul>
+
+<h2 id="license">License</h2>
+
+<p>This project is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details.</p>
+
+<h2 id="acknowledgments">Acknowledgments</h2>
+
+<ul>
+  <li>Contributors and maintainers</li>
+  <li>Open source community</li>
+  <li>Testing infrastructure providers</li>
+  <li>Documentation hosting services</li>
+</ul>
+
+  </div>
+
+  
+  <div class="project-gallery">
+    <h2>Project Gallery</h2>
+    <div class="gallery-grid">
+      
+      <div class="gallery-item">
+        <a href="/assets/images/projects/fastvalidate-demo.jpg" data-lightbox="project-gallery" data-title="Interactive demo page">
+          <img src="/assets/images/projects/fastvalidate-demo.jpg" alt="Interactive demo page">
+        </a>
+        
+        <figcaption>Interactive demo page</figcaption>
+        
+      </div>
+      
+      <div class="gallery-item">
+        <a href="/assets/images/projects/fastvalidate-docs.jpg" data-lightbox="project-gallery" data-title="Documentation website">
+          <img src="/assets/images/projects/fastvalidate-docs.jpg" alt="Documentation website">
+        </a>
+        
+        <figcaption>Documentation website</figcaption>
+        
+      </div>
+      
+      <div class="gallery-item">
+        <a href="/assets/images/projects/fastvalidate-benchmark.jpg" data-lightbox="project-gallery" data-title="Performance benchmarks">
+          <img src="/assets/images/projects/fastvalidate-benchmark.jpg" alt="Performance benchmarks">
+        </a>
+        
+        <figcaption>Performance benchmarks</figcaption>
+        
+      </div>
+      
+    </div>
+  </div>
+  
+
+  
+  <div class="project-testimonials">
+    <h2>Testimonials</h2>
+    <div class="testimonials-grid">
+      
+      <div class="testimonial">
+        <blockquote>
+          FastValidate has significantly improved our form validation performance. The TypeScript support is excellent!
+          <cite>— Alex Johnson</cite>
+          
+          <span class="role">Senior Developer at TechCorp</span>
+          
+        </blockquote>
+      </div>
+      
+      <div class="testimonial">
+        <blockquote>
+          Best validation library I've used. The API is intuitive and the documentation is top-notch.
+          <cite>— Maria Garcia</cite>
+          
+          <span class="role">Frontend Lead at StartupX</span>
+          
+        </blockquote>
+      </div>
+      
+    </div>
+  </div>
+  
+
+  <div class="project-navigation">
+    
+    
+    <a class="next" href="/projects/ai-research/">AI-Powered Text Analysis Framework &rarr;</a>
+    
+  </div>
+</article>
+
+<style>
+.project {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.project-banner {
+  margin: -2rem -1rem 2rem;
+  position: relative;
+}
+
+.project-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.project-banner figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-style: italic;
+}
+
+.project-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.project-meta > * {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.project-status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-weight: 500;
+}
+
+.project-status.completed { color: #2ecc71; }
+.project-status.in-progress { color: #f1c40f; }
+.project-status.planned { color: #95a5a6; }
+
+.project-link {
+  text-decoration: none;
+  color: #2a7ae2;
+  transition: color 0.3s ease;
+}
+
+.project-link:hover {
+  color: #1756a9;
+}
+
+.project-technologies {
+  margin-bottom: 2rem;
+}
+
+.tech-tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  margin: 0.25rem;
+  background: #f0f0f0;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.project-content {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.project-gallery {
+  margin: 3rem 0;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-item figcaption {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.project-testimonials {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.testimonials-grid {
+  display: grid;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.testimonial blockquote {
+  margin: 0;
+  padding: 1rem;
+  font-style: italic;
+  color: #555;
+  border-left: 4px solid #2a7ae2;
+}
+
+.testimonial cite {
+  display: block;
+  margin-top: 1rem;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.testimonial .role {
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.project-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+.project-navigation a {
+  text-decoration: none;
+  color: #2a7ae2;
+  transition: color 0.3s ease;
+}
+
+.project-navigation a:hover {
+  color: #1756a9;
+}
+
+@media (max-width: 768px) {
+  .project-title {
+    font-size: 2rem;
+  }
+
+  .project-image {
+    height: 300px;
+  }
+
+  .project-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+</style>
+
+<!-- Lightbox2 for image gallery -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrapper">
+      <div class="footer-content">
+        <p>&copy; 2024 Tech Explorer. All rights reserved.</p>
+        <div class="social-links">
+          
+          <a href="https://github.com/tech-explorer" target="_blank" rel="noopener">
+            <i class="fab fa-github"></i>
+          </a>
+          
+          
+          
+          <a href="https://twitter.com/techexplorer" target="_blank" rel="noopener">
+            <i class="fab fa-twitter"></i>
+          </a>
+          
+          
+          
+          <a href="https://linkedin.com/in/techexplorer" target="_blank" rel="noopener">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  
+</body>
+</html>

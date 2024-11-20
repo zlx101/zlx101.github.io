@@ -1,0 +1,48 @@
+[
+  
+    {
+      "title"    : "Beautiful Places Around the World",
+      "category" : "",
+      "tags"     : "travel, photography, nature, cities",
+      "url"      : "/2024/01/10/photo-gallery-post/",
+      "date"     : "January 10, 2024",
+      "excerpt"  : "Welcome to our photo journey around the world! In this post, we’ll explore some of the most iconic landmarks and beautiful places across different continents."
+    } ,
+  
+    {
+      "title"    : "5 Essential Productivity Tips for Developers",
+      "category" : "",
+      "tags"     : "productivity, work-life-balance, developer-tips",
+      "url"      : "/2024/01/09/productivity-tips/",
+      "date"     : "January 9, 2024",
+      "excerpt"  : "As developers, we’re constantly looking for ways to improve our productivity while maintaining code quality. Here are five essential tips that have helped me stay productive and focused."
+    } ,
+  
+    {
+      "title"    : "Mastering Markdown: A Complete Guide",
+      "category" : "",
+      "tags"     : "markdown, writing, documentation",
+      "url"      : "/2024/01/09/mastering-markdown/",
+      "date"     : "January 9, 2024",
+      "excerpt"  : "Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents. In this guide, we’ll explore everything you need to know about Markdown."
+    } ,
+  
+    {
+      "title"    : "Getting Started with Jekyll: A Comprehensive Guide",
+      "category" : "",
+      "tags"     : "jekyll, static-site, markdown, github-pages",
+      "url"      : "/2024/01/09/getting-started-with-jekyll/",
+      "date"     : "January 9, 2024",
+      "excerpt"  : "Jekyll is a powerful static site generator that makes it easy to create a beautiful website or blog. In this guide, we’ll explore the basics of Jekyll and how to get started with your first site."
+    } ,
+  
+    {
+      "title"    : "Welcome to My Blog!",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/2024/01/09/welcome-to-my-blog/",
+      "date"     : "January 9, 2024",
+      "excerpt"  : "This is my first blog post! I’m excited to start sharing my thoughts and experiences here."
+    } 
+  
+]

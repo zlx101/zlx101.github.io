@@ -1,0 +1,296 @@
+---
+layout: default
+---
+<article class="project" itemscope itemtype="http://schema.org/CreativeWork">
+  <header class="project-header">
+    {% if page.image %}
+    <div class="project-banner">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="project-image">
+      {% if page.image_caption %}
+      <figcaption>{{ page.image_caption }}</figcaption>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    <h1 class="project-title" itemprop="name">{{ page.title }}</h1>
+    
+    <div class="project-meta">
+      {% if page.date %}
+      <span class="project-date">
+        <i class="far fa-calendar-alt"></i>
+        {{ page.date | date: "%b %d, %Y" }}
+      </span>
+      {% endif %}
+
+      {% if page.status %}
+      <span class="project-status {{ page.status | downcase }}">
+        <i class="fas fa-circle"></i>
+        {{ page.status }}
+      </span>
+      {% endif %}
+
+      {% if page.github %}
+      <a href="{{ page.github }}" class="project-link github" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+        View on GitHub
+      </a>
+      {% endif %}
+
+      {% if page.website %}
+      <a href="{{ page.website }}" class="project-link website" target="_blank" rel="noopener">
+        <i class="fas fa-external-link-alt"></i>
+        Visit Website
+      </a>
+      {% endif %}
+    </div>
+
+    {% if page.technologies %}
+    <div class="project-technologies">
+      {% for tech in page.technologies %}
+      <span class="tech-tag">{{ tech }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </header>
+
+  <div class="project-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  {% if page.gallery %}
+  <div class="project-gallery">
+    <h2>Project Gallery</h2>
+    <div class="gallery-grid">
+      {% for image in page.gallery %}
+      <div class="gallery-item">
+        <a href="{{ image.url | relative_url }}" data-lightbox="project-gallery" data-title="{{ image.caption }}">
+          <img src="{{ image.url | relative_url }}" alt="{{ image.caption }}">
+        </a>
+        {% if image.caption %}
+        <figcaption>{{ image.caption }}</figcaption>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if page.testimonials %}
+  <div class="project-testimonials">
+    <h2>Testimonials</h2>
+    <div class="testimonials-grid">
+      {% for testimonial in page.testimonials %}
+      <div class="testimonial">
+        <blockquote>
+          {{ testimonial.quote }}
+          <cite>— {{ testimonial.author }}</cite>
+          {% if testimonial.role %}
+          <span class="role">{{ testimonial.role }}</span>
+          {% endif %}
+        </blockquote>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  <div class="project-navigation">
+    {% if page.previous.path contains '_projects' %}
+    <a class="prev" href="{{ page.previous.url | relative_url }}">&larr; {{ page.previous.title }}</a>
+    {% endif %}
+    {% if page.next.path contains '_projects' %}
+    <a class="next" href="{{ page.next.url | relative_url }}">{{ page.next.title }} &rarr;</a>
+    {% endif %}
+  </div>
+</article>
+
+<style>
+.project {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.project-banner {
+  margin: -2rem -1rem 2rem;
+  position: relative;
+}
+
+.project-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.project-banner figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-style: italic;
+}
+
+.project-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.project-meta > * {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.project-status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-weight: 500;
+}
+
+.project-status.completed { color: #2ecc71; }
+.project-status.in-progress { color: #f1c40f; }
+.project-status.planned { color: #95a5a6; }
+
+.project-link {
+  text-decoration: none;
+  color: #2a7ae2;
+  transition: color 0.3s ease;
+}
+
+.project-link:hover {
+  color: #1756a9;
+}
+
+.project-technologies {
+  margin-bottom: 2rem;
+}
+
+.tech-tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  margin: 0.25rem;
+  background: #f0f0f0;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.project-content {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.project-gallery {
+  margin: 3rem 0;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-item figcaption {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.project-testimonials {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.testimonials-grid {
+  display: grid;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.testimonial blockquote {
+  margin: 0;
+  padding: 1rem;
+  font-style: italic;
+  color: #555;
+  border-left: 4px solid #2a7ae2;
+}
+
+.testimonial cite {
+  display: block;
+  margin-top: 1rem;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.testimonial .role {
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.project-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+.project-navigation a {
+  text-decoration: none;
+  color: #2a7ae2;
+  transition: color 0.3s ease;
+}
+
+.project-navigation a:hover {
+  color: #1756a9;
+}
+
+@media (max-width: 768px) {
+  .project-title {
+    font-size: 2rem;
+  }
+
+  .project-image {
+    height: 300px;
+  }
+
+  .project-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+</style>
+
+<!-- Lightbox2 for image gallery -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>

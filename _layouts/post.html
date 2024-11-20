@@ -1,0 +1,163 @@
+---
+layout: default
+---
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {{ page.date | date: date_format }}
+      </time>
+      {%- if page.modified_date -%}
+        ~ 
+        <time class="dt-modified" datetime="{{ page.modified_date | date_to_xmlschema }}" itemprop="dateModified">
+          {{ page.modified_date | date: date_format }}
+        </time>
+      {%- endif -%}
+      {%- if page.author -%}
+        • {% for author in page.author %}
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
+            {%- if forloop.last == false %}, {% endif -%}
+        {% endfor %}
+      {%- endif -%}
+      {% include reading_time.html %}
+    </p>
+
+    {% if page.categories.size > 0 or page.tags.size > 0 %}
+    <div class="post-metadata">
+      {% if page.categories.size > 0 %}
+      <div class="categories">
+        <i class="fas fa-folder"></i>
+        {% for category in page.categories %}
+          <a href="{{ site.baseurl }}/categories#{{ category | slugize }}">{{ category }}</a>
+          {%- if forloop.last == false %}, {% endif -%}
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      {% if page.tags.size > 0 %}
+      <div class="tags">
+        <i class="fas fa-tags"></i>
+        {% for tag in page.tags %}
+          <a href="{{ site.baseurl }}/tags#{{ tag | slugize }}">{{ tag }}</a>
+          {%- if forloop.last == false %}, {% endif -%}
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    {% if page.image %}
+    <div class="featured-image">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: 'Featured Image' }}">
+      {% if page.image_caption %}
+      <figcaption>{{ page.image_caption }}</figcaption>
+      {% endif %}
+    </div>
+    {% endif %}
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ content }}
+
+    {% if page.gallery %}
+    <div class="image-gallery">
+      {% for image in page.gallery %}
+      <div class="gallery-item">
+        <a href="{{ image.url | relative_url }}" data-lightbox="gallery" data-title="{{ image.caption }}">
+          <img src="{{ image.url | relative_url }}" alt="{{ image.caption }}">
+        </a>
+        {% if image.caption %}
+        <figcaption>{{ image.caption }}</figcaption>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+
+  {% include share-buttons.html %}
+  {% include newsletter.html %}
+
+  {%- if site.disqus.shortname -%}
+    {%- include disqus_comments.html -%}
+  {%- endif -%}
+
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>
+
+<!-- Lightbox2 for image gallery -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+<style>
+.post-metadata {
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.post-metadata i {
+  margin-right: 5px;
+}
+
+.post-metadata a {
+  color: #2a7ae2;
+  text-decoration: none;
+}
+
+.post-metadata a:hover {
+  text-decoration: underline;
+}
+
+.featured-image {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.featured-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.featured-image figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+}
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.gallery-item {
+  position: relative;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.02);
+}
+
+.gallery-item figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+}
+</style>
